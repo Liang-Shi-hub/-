@@ -4,22 +4,22 @@
 #include<sstream> 
 using namespace std;
 int main(){
-	freopen("debug\\1in.txt","r",stdin);  //´ÓdebugÎÄ¼ş¼ĞÖĞ¶ÁÈ¡²âÊÔÊı¾İ 
-	freopen("debug\\1out.txt","w",stdout);  //½«²âÊÔ½á¹ûÊä³öµ½debugÎÄ¼ş¼ĞÏÂµÄ1out 
+	freopen("debug\\1.in","r",stdin);  //ä»debugæ–‡ä»¶å¤¹ä¸­è¯»å–æµ‹è¯•æ•°æ® 
+	freopen("debug\\1.out","w",stdout);  //å°†æµ‹è¯•ç»“æœè¾“å‡ºåˆ°debugæ–‡ä»¶å¤¹ä¸‹çš„1.out 
 	int T, n;
-	scanf("%d", &T);   //TÎª²âÊÔ´ÎÊı 
+	scanf("%d", &T);   //Tä¸ºæµ‹è¯•æ¬¡æ•° 
 	while( T-- ){     
 		scanf( "%d",&n );   
-		for(int i = n; i >= 6; i--){   //¸ù¾İÌâÒân´óÓÚµÈÓÚ6 ×î´óµÄlucky numberĞ¡ÓÚn 
-			bool flag = true;         //ÅĞ¶ÏiÎªlucky numberµÄflag£¬³õÊ¼Îªtrue 
+		for(int i = n; i >= 6; i--){   //æ ¹æ®é¢˜æ„nå¤§äºç­‰äº6 æœ€å¤§çš„lucky numberå°äºn 
+			bool flag = true;         //åˆ¤æ–­iä¸ºlucky numberçš„flagï¼Œåˆå§‹ä¸ºtrue 
 			int x = i;
 			while( x != 0){
-				if( ( x%10 ) != 6 && ( x%10 ) != 8)  //x×îµÍÎ»Êı²»ÊÇlucky number
+				if( ( x%10 ) != 6 && ( x%10 ) != 8)  //xæœ€ä½ä½æ•°ä¸æ˜¯lucky number
 				{
 				    flag = false; 
-					break;       //»Øµ½whileÑ­»· 
+					break;       //å›åˆ°whileå¾ªç¯ 
 				}   
-				x /= 10;   //µ±xÃ¿Î»ÉÏµÄÊı¶¼Îªlucky numberÊ±·½¿É²»Ö´ĞĞifÌø³öwhileÑ­»·µÃµ½´ğ°¸ 
+				x /= 10;   //å½“xæ¯ä½ä¸Šçš„æ•°éƒ½ä¸ºlucky numberæ—¶æ–¹å¯ä¸æ‰§è¡Œifè·³å‡ºwhileå¾ªç¯å¾—åˆ°ç­”æ¡ˆ 
 			}
 			
 			if( flag ) 
